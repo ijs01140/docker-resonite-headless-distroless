@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# ここ秘匿する必要あり
+STEAM_USERNAME='yourusername'
+STEAM_PASSWORD='yourpassword'
+STEAMBETAPASSWORD='headlesscode'
+
+# 変数設定
+STEAMAPPID=2519830
+STEAMBETA=headless 
+RESONITEDIR_DL=/tmp/resoniteHL
+HEADLESSDIR_DL=${RESONITEDIR_DL}/Headless
+DepotDownloader_PATH=${HOME}/bin/DepotDownloader
+
+# Resonite更新
+${DepotDownloader_PATH} \
+	-dir ${RESONITEDIR_DL} \
+	-username ${STEAM_USERNAME} \
+	-password ${STEAM_PASSWORD} \
+	-app ${STEAMAPPID} -beta ${STEAMBETA} -betapassword ${STEAMBETAPASSWORD} \
+	-validate	
